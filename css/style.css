@@ -2,31 +2,53 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-family: 'Roboto', sans-serif ;
+    font-family: 'Roboto', sans-serif;
 
 }
- .top{
+
+.top {
+    max-width: 2056px;
+    max-height: 3589px;
     padding-left: 20px;
     background-color: #D1891C;
     color: #333333;
 
 }
-h1{
+
+h1 {
     padding-left: 20px;
-    background-color:#00669F ;
+    background-color: #00669F;
     color: #FFFFFF;
     font-weight: 400;
 }
 
+main {
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+ */
+}
+
+section {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 article {
-    width:280px ;
+
+    width: 280px;
     height: 550px;
     position: relative;
-    margin:50px;
-    display: inline-block;
+    margin: 50px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-color: #F3F3F3;
+    
+}
+article>div{
+    text-align: center;
 }
 .fondo {
     width: 280px;
@@ -34,46 +56,58 @@ article {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
-.corazoncito{
+
+.corazoncito {
     position: absolute;
     width: 28px;
     top: 16px;
     left: 19px;
 
 }
-.rostro{
+
+.rostro {
     position: absolute;
     width: 130px;
     top: 117px;
     left: 80px;
 }
-h2{
+
+h2 {
     margin-top: 60px;
     text-align: center;
 }
-.info{
+
+.info {
     padding: 8px;
 }
-footer{
-    text-align: center;
+
+footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #00669F;
-    height: 50px;
-    color:#FFF9F9 ;
-    padding: 20px;
-  
+    height: 40px;
+    color: #FFF9F9;
+    max-width: 100%;
+
 }
-.github{
-    position:absolute;
-    right: 40px;
-    width: 88px;
-    display: inline-block;
-    top: 1375px;
+
+footer>p {
+    font-size: 12px;
+    line-height: 40px;
 }
-button{
+
+.github {
     position: absolute;
+    right: 20px;
+    height: 20px;
+}
+
+button {
     background-color: #00669F;
-    text-align: center; 
-    color:#F3F3F3 ;
+    text-align: center;
+    color: #F3F3F3;
     width: 150px;
     height: 40px;
     right: 60px;
@@ -81,5 +115,33 @@ button{
     border-color: #00669F;
     border-bottom-style: none;
     border-right-width: 0;
- }
+}
+.botonmas{
+    text-align: center;
+    /* right: 60px; */
 
+}
+.mas {
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    /* justify-content: center; */
+}
+
+@media (max-width: 450px) {
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .github {
+        position: relative;
+    }
+
+    footer>p {
+        padding-left: 20px;
+    }
+}
